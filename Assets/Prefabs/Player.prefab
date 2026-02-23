@@ -407,6 +407,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -758,6 +759,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1541,6 +1543,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1678,6 +1681,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1807,7 +1811,7 @@ MonoBehaviour:
   speed: 3
   speedRun: 5
   jumpForce: 10
-  mouseSensitivity: {x: 25, y: 25}
+  mouseSensitivity: {x: 150, y: 150}
   camera: {fileID: 5633977692861030972}
   smoothSpeed: 10
   enableTilt: 1
@@ -1849,8 +1853,8 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1549812269439918956}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: MovePerformed
+        m_TargetAssemblyTypeName: playerScript, Assembly-CSharp
+        m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1865,8 +1869,8 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1549812269439918956}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: LookPerformed
+        m_TargetAssemblyTypeName: playerScript, Assembly-CSharp
+        m_MethodName: OnLook
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1885,8 +1889,8 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1549812269439918956}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: JumpPerformed
+        m_TargetAssemblyTypeName: playerScript, Assembly-CSharp
+        m_MethodName: OnJump
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1942,7 +1946,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1549812269439918956}
         m_TargetAssemblyTypeName: playerScript, Assembly-CSharp
-        m_MethodName: SprintPerformed
+        m_MethodName: OnSprint
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1958,7 +1962,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1549812269439918956}
         m_TargetAssemblyTypeName: playerScript, Assembly-CSharp
-        m_MethodName: InteractPerformed
+        m_MethodName: OnInteract
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1986,8 +1990,8 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 4b9a1268-9232-406e-9ce1-25ba30eb9211
     m_ActionName: 'Player/PauseMenu[/Keyboard/escape]'
-  m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Keyboard&Mouse
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 2056671038736298152}
@@ -2133,6 +2137,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &9046036094840699324
 CapsuleCollider:

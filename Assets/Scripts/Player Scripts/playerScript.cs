@@ -267,10 +267,32 @@ public class playerScript : MonoBehaviour
         jumpPerformed = false;
     }
 
-    public void MovePerformed(InputAction.CallbackContext _ctx) => moveInputs = _ctx.ReadValue<Vector2>();
-    public void JumpPerformed(InputAction.CallbackContext _ctx) => jumpPerformed = _ctx.performed;
-    public void LookPerformed(InputAction.CallbackContext _ctx) => lookInputs = _ctx.ReadValue<Vector2>();
-    public void InteractPerformed(InputAction.CallbackContext ctx)
+    public void OnMove(InputAction.CallbackContext ctx)
+    {
+        moveInputs = ctx.ReadValue<Vector2>();
+        Debug.Log("MOVE: " + moveInputs);
+    }
+
+    public void OnLook(InputAction.CallbackContext ctx)
+    {
+        lookInputs = ctx.ReadValue<Vector2>();
+    }
+
+    public void OnJump(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+            jumpPerformed = true;
+    }
+
+    public void OnSprint(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+            isSprinting = true;
+        else if (ctx.canceled)
+            isSprinting = false;
+    }
+
+    public void OnInteract(InputAction.CallbackContext ctx)
     {
         if (ctx.performed && currentInteractable != null)
         {
