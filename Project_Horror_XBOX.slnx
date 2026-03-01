@@ -1,5 +1,15 @@
-﻿<Solution>
-  <Project Path="BetterHierarchy.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
-  <Project Path="BetterHierarchyDemoScripts.csproj" />
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="Assembly-CSharp.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="BetterHierarchy.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
+  <Project Path="BetterHierarchyDemoScripts.csproj">
+    <Platform Solution="*|x64" Project="x64" />
+  </Project>
 </Solution>
